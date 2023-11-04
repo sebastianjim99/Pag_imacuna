@@ -16,3 +16,6 @@ def Proyectos(request, proyect):
     }
     description = items[proyect]
     return HttpResponse (f"<h2> {proyect} </h2>" + description)
+
+def inicio(request):
+    return render(request, 'inicio.html')

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'config',  # app de toda la configuracion de la pagina.
+    'Inicio',  # app De inicio imacuna
 ]
 
 MIDDLEWARE = [
