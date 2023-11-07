@@ -1,0 +1,83 @@
+{% extends "Inicio.html" %}
+
+{% block titulo %}  Agregar linea de investigacion {% endblock %} 
+
+{% block contenido %}  
+
+<section>
+    <div>
+        <div class="container">
+            <h1><button class="btn btn-primary" type="button" style="margin: 5px;">Agregar</button>Líneas de investigación</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 col-md-3"><i class="far fa-star" style="font-size: 60px;"></i>
+                <h1>Text</h1>
+                <div class="row">
+                    <div class="col"><button class="btn btn-primary" type="button">Editar</button></div>
+                    <div class="col"><button class="btn btn-primary" type="button">Eliminar</button></div>
+                </div>
+            </div>
+            <div class="col-2 col-md-3"><i class="far fa-star" style="font-size: 60px;"></i>
+                <h1>Text</h1>
+                <div class="row">
+                    <div class="col"><button class="btn btn-primary" type="button">Editar</button></div>
+                    <div class="col"><button class="btn btn-primary" type="button">Eliminar</button></div>
+                </div>
+            </div>
+            <div class="col-2 col-md-3"><i class="far fa-star" style="font-size: 60px;"></i>
+                <h1>Text</h1>
+                <div class="row">
+                    <div class="col"><button class="btn btn-primary" type="button">Editar</button></div>
+                    <div class="col"><button class="btn btn-primary" type="button">Eliminar</button></div>
+                </div>
+            </div>
+            <div class="col-2 col-md-3"><i class="far fa-star" style="font-size: 60px;"></i>
+                <h1>Text</h1>
+                <div class="row">
+                    <div class="col"><button class="btn btn-primary" type="button">Editar</button></div>
+                    <div class="col"><button class="btn btn-primary" type="button">Eliminar</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <div class="card">
+        <div class="card-header">
+            Aregar linea de investigacion 
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Descripcion</h4>
+
+            {% include 'Admin/form.html' %}
+            
+        </div>
+        <div class="card-footer text-muted">
+            
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            Editar linea de investigacion 
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Editar</h4>
+
+            {% include 'Admin/form.html' %}
+            
+        </div>
+        <div class="card-footer text-muted">
+            
+        </div>
+    </div>
+
+
+
+
+    Formulario para agregar lienas de investigacion
+
+{% endblock %} 

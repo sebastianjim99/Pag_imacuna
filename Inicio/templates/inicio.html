@@ -1,12 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
+{% load static %}
+
 <html lang="en">
+
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imacuna</title>
+  <title> {% block titulo %}  {% endblock %} </title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 </head>
+
 <body>
-    Seccion de imacuna
+
+    <nav class="navbar navbar-expand-md bg-body">
+        <div class="container-fluid"><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div id="navcol-1" class="collapse navbar-collapse text-center" style="width: initial;">
+
+                <img src="{% static "logos/imacuna.png" %}" width="171" height="76" loading="auto" style="margin-left: 60px;" alt="" class="Imacuna_logo" />    <!-- LOGO IMACUNA -->
+
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Quienes somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contactanos</a></li>
+                </ul><button class="btn btn-primary" type="button" style="border-radius: 10;border-style: solid;margin-left: 2px;margin-right: 102px;">Ingresar</button>
+            </div>
+        </div>
+    </nav>
+
+    
+                
+    {% block contenido %} 
+                 
+        <div>
+            <div class="container">
+                <h1>Líneas de investigación</h1>
+            </div>
+            
+            <div class="container-fluid text-center d-grid float-start">
+                
+                <div class="row justify-content-center align-items-center">
+                    {% for Lineas_investigacion in investigacion %}
+
+                    <div class="col-md-2"><i class="far fa-star" style="font-size: 88px;"></i>
+
+                        {{ Lineas_investigacion.id}}<br>
+                        <img src="{{ Lineas_investigacion.imagen.url}}" height="100" width="100" alt=""><br>
+                        {{ Lineas_investigacion.descripccion}}
+
+                    </div>
+                    {% endfor %}
+
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+                 
+    {% endblock %} 
+
+        
+
+   
+
+    
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
 </body>
+
 </html>
