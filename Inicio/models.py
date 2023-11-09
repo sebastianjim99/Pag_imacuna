@@ -1,4 +1,5 @@
 from distutils.command.upload import upload
+from pydoc import describe
 from turtle import update
 from django.db import models
 
@@ -20,4 +21,9 @@ class Lineas_investigacion(models.Model):
         self.imagen.storage.delete(self.imagen.name)
         super().delete()
 
+
+class Proyectos (models.Model):
+    titulo = models.CharField(max_length=50)
+    descripcion = models.TextField(max_length=250)
+    
     

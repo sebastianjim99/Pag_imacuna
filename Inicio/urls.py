@@ -6,8 +6,10 @@ from django.contrib.staticfiles.urls import static
 
 
 urlpatterns = [
-
     path('', views.inicio, name= 'Inicio'),
-    path('Lineas_investigacion', views.lineas_inves, name= 'Lineas_investigacion'),
+    path('Admin', views.admin, name= 'Admin'),
+    path('Admin/crear', views.Crear, name= 'Crear' ),
+    path('editar', views.editar, name= 'Editar'),
+
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

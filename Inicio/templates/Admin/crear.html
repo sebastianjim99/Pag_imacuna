@@ -1,0 +1,23 @@
+{% extends "Inicio.html" %}
+
+{% block titulo %}  crear nueva linea de investigación {% endblock %} 
+
+{% block contenido %}  
+
+<div class="card">
+    <div class="card-header">
+        Agregar lineas de investigación 
+    </div>
+    <div class="card-body">
+
+        <h4 class="card-title"> Lineas de investigacion </h4>
+
+    {% include 'Admin/form.html' %} 
+
+    </div>
+    <div class="card-footer text-muted">
+       
+    </div>
+</div>
+
+{% endblock %} 
